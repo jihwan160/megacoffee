@@ -39,28 +39,86 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 #wrap header .gnbCover .gnbArea {
   display: flex;
-  align-items: center;
 }
 #wrap header .gnbCover .gnbArea .logo {
   width: 200px;
+  position: absolute;
+  top: 30px;
+  z-index: 9;
 }
 #wrap header .gnbCover .gnbArea .logo img {
   width: 100%;
 }
 #wrap header .gnbCover .gnbArea .gnb {
-  width: 680px;
   display: grid;
-  margin: 0 100px;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
+  width: 100%;
+  margin: 0 300px;
 }
-#wrap header .gnbCover .gnbArea .gnb a li {
-  padding: 40px 0;
+#wrap header .gnbCover .gnbArea .gnb li {
+  padding: 40px 0 0;
   font-size: 1.1rem;
   text-align: center;
+  position: relative;
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .gnb li .gnbName {
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+#wrap header .gnbCover .gnbArea .gnb li::after {
+  content: "";
+  width: calc(100% - 50px);
+  height: 2px;
+  background: #000;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .gnb li .subMenuCover {
+  width: 100%;
+  position: absolute;
+  display: none;
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .gnb li .subMenuCover .subMenuList {
+  padding-top: 20px;
+}
+#wrap header .gnbCover .gnbArea .gnb li .subMenuCover .subMenuList .subMenu {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px 0;
+}
+#wrap header .gnbCover .gnbArea .gnb li .subMenuCover .subMenuList .subMenu a:hover {
+  text-decoration: underline;
+}
+#wrap header .gnbCover .gnbArea .gnb li:hover {
+  background: #fdd000;
+}
+#wrap header .gnbCover .gnbArea .gnb li:hover::after {
+  display: block;
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .gnb:hover li {
+  height: 320px;
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .gnb:hover li .subMenuCover {
+  display: block;
+  transition: all 0.5s;
+}
+#wrap header .gnbCover .gnbArea .sns {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  z-index: 9;
 }
 #wrap header .gnbCover .gnbArea .sns ul {
   display: flex;
