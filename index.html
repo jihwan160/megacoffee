@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- 스와이퍼 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>메가MGC커피</title>
 </head>
 <body>
@@ -153,7 +158,13 @@
         </header>
         <main class="fullpage">
             <!-- 첫번째 페이지 -->
-            <div class="container">안녕하세요?</div>
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
             <!-- 두번째 페이지 -->
             <div class="container">원페이지스크롤 입니다.</div>
             <!-- 세번째 페이지 -->
@@ -165,5 +176,8 @@
         </main>
     </div>
 </body>
+<!-- 스와이퍼 js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- index js -->
 <script src="./js/index.js"></script>
 </html>

@@ -178,10 +178,25 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      &:nth-child(1){background: #e28b8b;}
+      &:nth-child(1){background: #000;}
       &:nth-child(2){background: #ceb0b0;}
       &:nth-child(3){background: #03c222;}
       &:nth-child(4){background: #181a8d;}
+    }
+
+    & .swiper {
+      width: 100%;
+      height: 100%;
+
+      & .swiper-slide {
+        & img {
+          position: relative;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          width: 100%;
+        }
+      }
     }
   } // fullpage
 }
