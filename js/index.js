@@ -1,28 +1,90 @@
-// 풀스크롤롤
-const fullpage = document.getElementsByClassName('fullpage')[0];
-const container = document.getElementsByClassName('container');
-let page = 0;
-const lastPage = container.length - 1;
+// // 풀스크롤
+// const fullpage = document.getElementsByClassName('fullpage')[0];
+// const container = document.getElementsByClassName('section');
+// let page = 0;
+// const lastPage = container.length - 1;
 
-window.addEventListener('wheel', (e) => {
-  e.preventDefault();
+// window.addEventListener('wheel', (e) => {
+//   e.preventDefault();
 
-  if(e.deltaY > 0) {
-    page++;
+//   if(e.deltaY > 0) {
+//     page++;
+//   }
+//   if(e.deltaY < 0) {
+//     page--;
+//   }
+//   if(page < 0) {
+//     page = 0;
+//   }
+//   if(page > lastPage) {
+//     page = lastPage
+//   }
+//   console.log(e.deltaY);
+//   fullpage.style.top = page * -100 + 'vh';
+// }, {passive: false})
+
+let currentIndex = 0;
+const section = document.querySelectorAll('.section');
+const gnbLinks = document.querySelectorAll('.fullpageGnb a');
+let isScrolling = false;
+
+gnbLinks.forEach((link,index) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    scrollToSection(index);
+  })
+})
+
+document.addEventListener('wheel', (ev) => {
+  if(isScrolling) return;
+  isScrolling = true;
+
+  if(ev.deltaY > 0) {
+    if (currentIndex < section.length - 1) {
+      currentIndex++
+    }
+  } else {
+    if(currentIndex > 0) {
+      currentIndex--;
+    }
   }
-  if(e.deltaY < 0) {
-    page--;
-  }
-  if(page < 0) {
-    page = 0;
-  }
-  if(page > lastPage) {
-    page = lastPage
-  }
-  console.log(e.deltaY);
-  // fullpage.style.top = page * -100 + "vh";
-  fullpage.style.top = page * -100 + 'vh';
-}, {passive: false})
+
+  scrollToSection(currentIndex);
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 800);
+
+
+});
+
+function scrollToSection(index) {
+  section[index].scrollIntoView({behavior: 'smooth'});
+  currentIndex = index;
+  updateGnb();
+}
+
+function updateGnb () {
+  gnbLinks.forEach((link,index) => {
+    if(index === currentIndex) {
+      link.classList.add('active')
+    } else {
+      link.classList.remove('active');
+    }
+  })
+}
+
+updateGnb();
+
+
+
+
+
+
+
+
+
+
 
 // 스와이퍼js와 index.js가 충돌이나서 DOMContentLoaded 을 하면 충돌안남
 document.addEventListener('DOMContentLoaded', () => {
