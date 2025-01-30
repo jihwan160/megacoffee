@@ -189,6 +189,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 #wrap .fullpage .section:nth-child(1) {
   background: #000;
@@ -202,6 +203,64 @@ body {
 #wrap .fullpage .section:nth-child(4) {
   background: #181a8d;
 }
+#wrap .fullpage .section .scrollDown {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: 999;
+  animation: aniD 1.5s linear infinite;
+}
+@keyframes aniD {
+  0% {
+    bottom: 10px;
+    opacity: 1;
+  }
+  50% {
+    bottom: 0;
+    opacity: 0.2;
+  }
+  100% {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+#wrap .fullpage .section .scrollDown .scrollDownCover {
+  display: block;
+  width: 25px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+#wrap .fullpage .section .scrollDown .scrollDownCover .scrollDownWheel {
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100px;
+  animation: ani 2s linear infinite;
+}
+@keyframes ani {
+  0% {
+    transform: translateY(-50% 0.5px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50%, 15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 30px);
+    opacity: 1;
+  }
+}
+#wrap .fullpage .section .scrollDown .scrollDownText {
+  margin-top: 10px;
+  color: #fff;
+}
 #wrap .fullpage .swiper {
   width: 100%;
   height: 100%;
@@ -212,4 +271,17 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+}
+#wrap .fullpage .swiper .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 20px;
+  height: 8px;
+  background: #fff;
+  opacity: 0.3;
+  border-radius: 100px;
+}
+#wrap .fullpage .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 48px;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */
