@@ -1,27 +1,4 @@
-// // 풀스크롤
-// const fullpage = document.getElementsByClassName('fullpage')[0];
-// const container = document.getElementsByClassName('section');
-// let page = 0;
-// const lastPage = container.length - 1;
-
-// window.addEventListener('wheel', (e) => {
-//   e.preventDefault();
-
-//   if(e.deltaY > 0) {
-//     page++;
-//   }
-//   if(e.deltaY < 0) {
-//     page--;
-//   }
-//   if(page < 0) {
-//     page = 0;
-//   }
-//   if(page > lastPage) {
-//     page = lastPage
-//   }
-//   console.log(e.deltaY);
-//   fullpage.style.top = page * -100 + 'vh';
-// }, {passive: false})
+// 풀스크롤
 
 let currentIndex = 0;
 const section = document.querySelectorAll('.section');
@@ -118,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // 스와이퍼
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.sec1 .swiper', {
     // Optional parameters
     // direction: 'vertical',
     // loop: true,
@@ -128,5 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
   });
+
+    // 스와이퍼
+    const swiper2 = new Swiper('.sec2 .swiper', {
+      // Optional parameters
+      // direction: 'vertical',
+      // loop: true,
+  
+  
+    });
 })
 

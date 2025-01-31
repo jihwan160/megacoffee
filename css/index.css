@@ -31,6 +31,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 9999;
+  border-bottom: 1px solid #000;
 }
 #wrap header:hover {
   background: #fff;
@@ -186,21 +187,18 @@ body {
 #wrap .fullpage .section {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
-#wrap .fullpage .section:nth-child(1) {
+#wrap .fullpage .section:nth-child(2) {
   background: #000;
 }
-#wrap .fullpage .section:nth-child(2) {
-  background: #ceb0b0;
-}
 #wrap .fullpage .section:nth-child(3) {
-  background: #03c222;
+  background: #fff;
 }
 #wrap .fullpage .section:nth-child(4) {
+  background: #03c222;
+}
+#wrap .fullpage .section:nth-child(5) {
   background: #181a8d;
 }
 #wrap .fullpage .section .scrollDown {
@@ -261,18 +259,18 @@ body {
   margin-top: 10px;
   color: #fff;
 }
-#wrap .fullpage .swiper {
+#wrap .fullpage .sec1 .swiper {
   width: 100%;
   height: 100%;
 }
-#wrap .fullpage .swiper .swiper-slide img {
+#wrap .fullpage .sec1 .swiper .swiper-slide img {
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
 }
-#wrap .fullpage .swiper .swiper-pagination .swiper-pagination-bullet {
+#wrap .fullpage .sec1 .swiper .swiper-pagination .swiper-pagination-bullet {
   margin: 0 4px;
   width: 20px;
   height: 8px;
@@ -280,8 +278,81 @@ body {
   opacity: 0.3;
   border-radius: 100px;
 }
-#wrap .fullpage .swiper .swiper-pagination .swiper-pagination-bullet-active {
+#wrap .fullpage .sec1 .swiper .swiper-pagination .swiper-pagination-bullet-active {
   opacity: 1;
   width: 48px;
   border-radius: 5px;
+}
+#wrap .fullpage .sec2 .sec2Cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 100px;
+  display: flex;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left {
+  width: 50%;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .subTitle {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 300;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .title {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 42px 0;
+  position: relative;
+  letter-spacing: -2px;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .title::before {
+  content: "";
+  width: 70%;
+  height: 50%;
+  background: #fdd000;
+  display: block;
+  position: absolute;
+  left: -4%;
+  top: 55%;
+  z-index: -1;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .desc {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .desc2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .menuBtn {
+  width: 150px;
+  height: 56px;
+  font-weight: 600;
+  background: #fdd000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .left .menuBtn:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s;
+  background: #ffdf43;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .right {
+  width: 50%;
+}
+#wrap .fullpage .sec2 .sec2Cover .sec2Area .right .swiper {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=index.css.map */
