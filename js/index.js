@@ -65,6 +65,23 @@ updateGnb();
 
 // 스와이퍼js와 index.js가 충돌이나서 DOMContentLoaded 을 하면 충돌안남
 document.addEventListener('DOMContentLoaded', () => {
+
+  // header fixed
+  let header = document.querySelector('.header');
+  let logo = document.querySelector('.logoImg');
+  console.log(header);
+
+  window.addEventListener('scroll', function () {
+    if(window.scrollY > 50) {
+      header.classList.add('headerFixed');
+      logo.src = '/img/header/logo.png'
+    } else {
+      header.classList.remove('headerFixed');
+      logo.src = '/img/header/logo_b.png'
+    }
+  })
+
+
   // 스와이퍼 슬라이드이미지 여러개 만들기
   const swiperWrapper = document.querySelector('.sec1 .swiper-wrapper');
   // 이미지 배열
