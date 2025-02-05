@@ -18,6 +18,7 @@ body {
   border: 0;
   overflow: hidden;
   font-size: 3rem;
+  color: #1c1c1b;
 }
 
 #wrap {
@@ -429,4 +430,73 @@ body {
 }
 #wrap .fullpage .sec2 .sec2Cover .sec2Area .right .swiper .swiper-button-prev:hover {
   opacity: 1;
+}
+#wrap .fullpage .sec3 .sec3Cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area {
+  width: 100%;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left {
+  margin-right: 50px;
+  width: 50%;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .subTitle {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 300;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .title {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .title span {
+  font-size: 60px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -2px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .title span::before {
+  content: "";
+  width: 100%;
+  padding: 0 20px;
+  height: 50%;
+  display: block;
+  background: #fff;
+  position: absolute;
+  left: -20px;
+  bottom: 0px;
+  z-index: -1;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .desc {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .desc span {
+  font-size: 24px;
+  font-weight: 600;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .desc2 {
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 20px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .left .desc3 {
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 16px;
+}
+#wrap .fullpage .sec3 .sec3Cover .sec3Area .right {
+  width: 50%;
 }/*# sourceMappingURL=index.css.map */
