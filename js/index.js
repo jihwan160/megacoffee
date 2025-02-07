@@ -1,9 +1,13 @@
 // 풀스크롤
 
-let currentIndex = 0;
+let currentIndex = parseInt(sessionStorage.getItem('currentIndex')) || 0;
 const section = document.querySelectorAll('.section');
 const gnbLinks = document.querySelectorAll('.fullpageGnb a');
 let isScrolling = false;
+
+window.addEventListener('load', () => {
+  scrollToSection(currentIndex, false);
+})
 
 gnbLinks.forEach((link,index) => {
   link.addEventListener('click', (e) => {
@@ -35,10 +39,14 @@ document.addEventListener('wheel', (ev) => {
 
 });
 
-function scrollToSection(index) {
+function scrollToSection(index, save = true) {
   section[index].scrollIntoView({behavior: 'smooth'});
   currentIndex = index;
   updateGnb();
+
+  if(save) {
+    sessionStorage.setItem('currentIndex', currentIndex);
+  }
 }
 
 function updateGnb () {
@@ -127,7 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const swiper2 = new Swiper('.sec2 .swiper', {
       // Optional parameters
       // direction: 'vertical',
-      // loop: true,
+      autoplay : {
+        delay : 5000,
+      },
       slidesPerView: 1,
       centeredSlides: true,
       spaceBetween: 20,
@@ -137,6 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
       },
   
     });
+
+    document.querySelector('.sec2 .swiper-button-prev').addEventListener('click', () => {
+      swiper2.autoplay.stop();
+    })
+
+    document.querySelector('.sec2 .swiper-button-next').addEventListener('click', () => {
+      swiper2.autoplay.stop();
+    })
 
     const swiperWrapper2 = document.querySelector('.right .swiper-wrapper');
 
