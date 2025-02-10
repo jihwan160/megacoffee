@@ -630,4 +630,35 @@ body {
   left: 50%;
   top: 50%;
   transform: translateY(-50%);
+}
+#wrap .fullpage .sec5 .sec5Cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .title {
+  font-size: 24px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .title span {
+  font-size: 60px;
+  font-weight: 900;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .title span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fdd000;
+  display: block;
+  position: absolute;
 }/*# sourceMappingURL=index.css.map */
