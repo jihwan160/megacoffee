@@ -714,28 +714,100 @@ body {
         align-items: center;
         & .sec5Area {
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 100px;
           & .title {
             font-size: 24px;
             font-weight: 900;
+            margin-bottom: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
             & span {
               font-size: 60px;
               font-weight: 900;
+              position: relative;
+              z-index: 1;
+              margin-top: 15px;
               &::after {
                 content: '';
                 width: 100%;
-                height: 100%;
+                height: 60%;
                 background: #fdd000;
                 display: block;
                 position: absolute;
-                
+                bottom: -10px;
+                left: -20px;
+                padding: 0 20px;
+                z-index: -1;
               }
             }
+          }
+
+          & .eventList {
+
+            & ul {
+              display: flex;
+              align-items: center;
+              & .eventTab {
+                border-radius: 10px;
+                border: 1px solid rgba(0,0,0,0.1);
+                overflow: hidden;
+                margin-right: 20px;
+
+                &:nth-child(3) {
+                  margin-right: 0;
+                }
+                &:hover img {
+                  transform: scale(1.1);
+                  transition: all 0.2s;
+                }
+                & .imgCover {
+                  overflow: hidden;
+                  & img {
+                    width: 100%;
+                    transition: all 0.2s;
+                  }
+                }
+
+                & .desc {
+                  padding: 20px;
+
+                  & .descTitle {
+                    margin-bottom: 10px;
+                    font-size: 22px;
+                    opacity: 0.7;
+                    line-height: 1.5;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                  }
+
+                  & .descText {
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                    opacity: 0.7;
+                    line-height: 1.2;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                  }
+
+                  & .textN {
+                    visibility: hidden;
+                  }
+
+                  & .date {
+                    font-size: 15px;
+                    opacity: 0.7;
+                  }
+                }
+              }
+            }
+            
           }
         }
       }

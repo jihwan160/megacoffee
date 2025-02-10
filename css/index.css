@@ -639,13 +639,14 @@ body {
 }
 #wrap .fullpage .sec5 .sec5Cover .sec5Area {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .title {
   font-size: 24px;
   font-weight: 900;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -653,12 +654,73 @@ body {
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .title span {
   font-size: 60px;
   font-weight: 900;
+  position: relative;
+  z-index: 1;
+  margin-top: 15px;
 }
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .title span::after {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 60%;
   background: #fdd000;
   display: block;
   position: absolute;
+  bottom: -10px;
+  left: -20px;
+  padding: 0 20px;
+  z-index: -1;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul {
+  display: flex;
+  align-items: center;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-right: 20px;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab:nth-child(3) {
+  margin-right: 0;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab:hover img {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .imgCover {
+  overflow: hidden;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .imgCover img {
+  width: 100%;
+  transition: all 0.2s;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc {
+  padding: 20px;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .descTitle {
+  margin-bottom: 10px;
+  font-size: 22px;
+  opacity: 0.7;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .descText {
+  margin-bottom: 10px;
+  font-size: 15px;
+  opacity: 0.7;
+  line-height: 1.2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .textN {
+  visibility: hidden;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .date {
+  font-size: 15px;
+  opacity: 0.7;
 }/*# sourceMappingURL=index.css.map */
