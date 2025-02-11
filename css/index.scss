@@ -772,7 +772,7 @@ body {
                 }
 
                 & .desc {
-                  padding: 20px;
+                  padding: 26px;
 
                   & .descTitle {
                     margin-bottom: 10px;
@@ -808,6 +808,30 @@ body {
               }
             }
             
+          }
+
+          & .eventDesc {
+            margin-top: 40px;
+            text-align: center;
+            & p {
+              margin-bottom: 20px;
+              font-weight: 300;
+              font-size: 16px;
+            }
+
+            & .more {
+              font-size: 18px;
+              padding: 0 30px;
+              background: #fdd000;
+              height: 56px;
+              cursor: pointer;
+              transition: all 0.3s;
+              &:hover {
+                transform: translateY(-5px);
+                transition: all 0.3s;
+                background: #ffdf43;
+              }
+            }
           }
         }
       }

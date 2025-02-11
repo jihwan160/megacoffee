@@ -695,7 +695,7 @@ body {
   transition: all 0.2s;
 }
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc {
-  padding: 20px;
+  padding: 26px;
 }
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .descTitle {
   margin-bottom: 10px;
@@ -723,4 +723,26 @@ body {
 #wrap .fullpage .sec5 .sec5Cover .sec5Area .eventList ul .eventTab .desc .date {
   font-size: 15px;
   opacity: 0.7;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventDesc {
+  margin-top: 40px;
+  text-align: center;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventDesc p {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 16px;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventDesc .more {
+  font-size: 18px;
+  padding: 0 30px;
+  background: #fdd000;
+  height: 56px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#wrap .fullpage .sec5 .sec5Cover .sec5Area .eventDesc .more:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s;
+  background: #ffdf43;
 }/*# sourceMappingURL=index.css.map */
