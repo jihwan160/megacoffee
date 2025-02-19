@@ -70,7 +70,6 @@ updateGnb();
 
 
 
-
 // 스와이퍼js와 index.js가 충돌이나서 DOMContentLoaded 을 하면 충돌안남
 document.addEventListener('DOMContentLoaded', () => {
 
